@@ -13,7 +13,7 @@ This package allows you to use your SCSS variables in your JS code. Specifically
 Install via npm:
 
  ```sh
-npm install scss-to-json
+npm install @crocsx/scss-to-json
  ```
 
 ## Input and Output
