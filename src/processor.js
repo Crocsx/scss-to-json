@@ -8,17 +8,22 @@ var utilities = require('./utilities');
 var LINE_DELIMITER = '\n';
 var COMMENT_DELIMETER = '//';
 var EMPTY_LINES = ['', '\n', '\s'];
+var SPECIAL_CHAR = ['@'];
 
 function makeObject(declarations, options) {
   var output = {};
 
   declarations.forEach(function(declaration) {
+    var name = declaration.variable.value;
+    if (hasRename(options)) {
+      name = options.rename(name);
+    }
     if (hasScope(options)) {
       if (declaration.global) {
-        output[declaration.variable.value] = declaration.value.value;
+        output[name] = declaration.value.value;
       }
     } else {
-      output[declaration.variable.value] = declaration.value.value;
+      output[name] = declaration.value.value;
     }
   });
 
@@ -27,7 +32,7 @@ function makeObject(declarations, options) {
 
 function filterLines(line) {
   return EMPTY_LINES.every(function(lineValue) {
-    return line !== lineValue && line.slice(0, 2) !== COMMENT_DELIMETER;
+    return line !== lineValue && line.slice(0, 2) !== COMMENT_DELIMETER && !new RegExp(SPECIAL_CHAR.join("|")).test('line');
   });
 }
 
@@ -71,6 +76,10 @@ function hasScope(options) {
 
 function hasDependencies(options) {
   return options && options.dependencies && options.dependencies.length > 0;
+}
+
+function hasRename(options) {
+  return options && options.rename && typeof options.rename === 'function';
 }
 
 function normalizeLines(line) {
