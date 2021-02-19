@@ -83,7 +83,7 @@ describe('Integration Tests', function() {
 
   context('if rename option is specified', function() {
     it('should compile the sample file to the correct JS object', function() {
-      var filePath = path.resolve(__dirname, 'scss', 'small-test.scss');
+      var filePath = path.resolve(__dirname, 'scss', 'rename-test.scss');
       var compiled = scssToJson(filePath, {
         rename: function(name) {
           return name.replace('$', 'renamed-');
@@ -98,7 +98,7 @@ describe('Integration Tests', function() {
     });
 
     it('should retain the last-seen value for matching names', function() {
-      var filePath = path.resolve(__dirname, 'scss', 'small-test.scss');
+      var filePath = path.resolve(__dirname, 'scss', 'rename-test.scss');
       var compiled = scssToJson(filePath, {
         rename: function() {
           return 'allTheSame';

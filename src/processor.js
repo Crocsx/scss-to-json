@@ -32,7 +32,7 @@ function makeObject(declarations, options) {
 
 function filterLines(line) {
   return EMPTY_LINES.every(function(lineValue) {
-    return line !== lineValue && line.slice(0, 2) !== COMMENT_DELIMETER && !new RegExp(SPECIAL_CHAR.join("|")).test('line');
+    return line !== lineValue && line.slice(0, 2) !== COMMENT_DELIMETER && !new RegExp(SPECIAL_CHAR.join("|")).test(line);
   });
 }
 
