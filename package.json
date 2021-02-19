@@ -1,5 +1,5 @@
 {
-  "name": "@username/scss-to-json",
+  "name": "@crocsx/scss-to-json",
   "version": "2.0.0",
   "description": "A utility for converting SCSS variables files to JSON",
   "homepage": "https://github.com/Crocsx/scss-to-json",
@@ -7,13 +7,9 @@
     "scss",
     "json"
   ],
-  "author": {
-    "name": "Ryan Bahniuk",
-    "email": "ryan.bahniuk@gmail.com",
-    "url": "http://bahni.uk"
-  },
+  "author": "Federico Giacomini <crocsx.gaming@gmail.com>",
   "bin": {
-    "scss-to-json": "./bin/scss-to-json"
+    "scss-to-json": "bin/scss-to-json"
   },
   "repository": {
     "type": "git",
@@ -49,5 +45,9 @@
   "scripts": {
     "test": "cross-env NODE_ENV=test mocha",
     "pretest": "eslint ."
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "license": "ISC"
 }

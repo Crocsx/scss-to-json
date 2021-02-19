@@ -1,10 +1,12 @@
-[![Build Status](https://travis-ci.org/ryanbahniuk/scss-to-json.svg?branch=master)](https://travis-ci.org/ryanbahniuk/scss-to-json)
+# fork
+
+This is a fork of [Ryan Bahniuk's scss-to-json](https://github.com/ryanbahniuk/scss-to-json). Since the original project looks no longer maintained. I create a fork including pending PR.
 
 # scss-to-json
 
 > A package to require SCSS variables in JSON format.
 
-This package allows you to use your SCSS variables in your JS code. Specifically, it takes a SCSS variable file (example below) and will parse, run Sass functions, and convert to JSON format. This package is a function that will make this conversion for you in memory. If you want to output JSON to your file system, you should use the associated [grunt-scss-to-json](https://www.npmjs.com/package/grunt-scss-to-json "grunt-scss-to-json") package.
+This package allows you to use your SCSS variables in your JS code. Specifically, it takes a SCSS variable file (example below) and will parse, run Sass functions, and convert to JSON format. This package is a function that will make this conversion for you in memory. If you want to output JSON to your file system, you should use the associated Ryan Bahniuk's [grunt-scss-to-json](https://www.npmjs.com/package/grunt-scss-to-json "grunt-scss-to-json") package.
 
 ## Installation
 
@@ -145,11 +147,10 @@ You can also use the CLI `scss-to-json <file>`.
 ## Contributing
 
 Pull requests are welcome. If you add functionality, then please add unit tests
-to cover it. Continuous Integration is handled by [Travis](https://travis-ci.org/ryanbahniuk/scss-to-json "Travis").
+to cover it.
 
 ## License
 
-MIT © Ryan Bahniuk
+MIT © Federico Giacomini
 
-[ci]:      https://travis-ci.org/ryanbahniuk/scss-to-json
 [npm]:     https://www.npmjs.com/package/scss-to-json
